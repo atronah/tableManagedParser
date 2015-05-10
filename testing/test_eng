@@ -1,0 +1,7 @@
+<Expr> ::= <Product><ExprS>
+<ExprS> ::= <PlusMinus> <Product><ExprS> | empty
+<Product> ::= <Operand><ProductS>
+<ProductS> ::= <ProductDiv> <Operand><ProductS> | empty
+<Operand> ::= (<Expr>) | id | num
+<PlusMinus> ::= + | -
+<ProductDiv> ::= * | /

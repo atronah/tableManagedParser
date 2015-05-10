@@ -1,0 +1,56 @@
+<!DOCTYPE ParsingResult>
+<ParseTree xmlns="">
+    <Expr>
+        <Product>
+            <Operand>
+                <Terminal lineInSrc="0" alias="(" posInLine="0">(</Terminal>
+                <Expr>
+                    <Product>
+                        <Operand>
+                            <Terminal lineInSrc="0" alias="num" posInLine="1">22</Terminal>
+                        </Operand>
+                        <ProductS>
+                            <Terminal lineInSrc="0" alias="empty" posInLine="3">empty</Terminal>
+                        </ProductS>
+                    </Product>
+                    <ExprS>
+                        <PlusMinus>
+                            <Terminal lineInSrc="0" alias="+" posInLine="3">+</Terminal>
+                        </PlusMinus>
+                        <Product>
+                            <Operand>
+                                <Terminal lineInSrc="0" alias="num" posInLine="4">55</Terminal>
+                            </Operand>
+                            <ProductS>
+                                <Terminal lineInSrc="0" alias="empty" posInLine="6">empty</Terminal>
+                            </ProductS>
+                        </Product>
+                        <ExprS>
+                            <Terminal lineInSrc="0" alias="empty" posInLine="6">empty</Terminal>
+                        </ExprS>
+                    </ExprS>
+                </Expr>
+                <Terminal lineInSrc="0" alias=")" posInLine="6">)</Terminal>
+            </Operand>
+            <ProductS>
+                <Terminal lineInSrc="1" alias="empty" posInLine="2">empty</Terminal>
+            </ProductS>
+        </Product>
+        <ExprS>
+            <PlusMinus>
+                <Terminal lineInSrc="1" alias="+" posInLine="2">+</Terminal>
+            </PlusMinus>
+            <Product>
+                <Operand>
+                    <Terminal lineInSrc="1" alias="num" posInLine="4">17</Terminal>
+                </Operand>
+                <ProductS>
+                    <Terminal lineInSrc="1" alias="empty" posInLine="6">empty</Terminal>
+                </ProductS>
+            </Product>
+            <ExprS>
+                <Terminal lineInSrc="1" alias="empty" posInLine="6">empty</Terminal>
+            </ExprS>
+        </ExprS>
+    </Expr>
+</ParseTree>

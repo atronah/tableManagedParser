@@ -1,0 +1,81 @@
+\section{Класс \-Grammar\-Symbol}
+\label{classGrammarSymbol}\index{\-Grammar\-Symbol@{\-Grammar\-Symbol}}
+
+
+Описывает символ грамматики  
+
+
+
+
+{\ttfamily \#include $<$\-Grammar\-Symbol.\-h$>$}
+
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Grammar\-Symbol} ()\label{classGrammarSymbol_a08cda21b11486c614c407756eb15112d}
+
+\begin{DoxyCompactList}\small\item\em Создает грамматический пустой символ \end{DoxyCompactList}\item 
+{\bf \-Grammar\-Symbol} (const \-Q\-String \&{\bf alias}, const \-Q\-String \&{\bf description}=\-Q\-String())
+\begin{DoxyCompactList}\small\item\em Создает грамматический символ с указаннами псевдонимом и описанием \end{DoxyCompactList}\item 
+bool {\bf is\-Terminal} () const 
+\begin{DoxyCompactList}\small\item\em Проверяет, является ли символ терминальным \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\-Q\-String {\bf alias}\label{classGrammarSymbol_a6a9f9d16afbb53c9c4ea010ede942b27}
+
+\begin{DoxyCompactList}\small\item\em псевдоним грамматического символа \end{DoxyCompactList}\item 
+\-Q\-String {\bf description}\label{classGrammarSymbol_ab434f25b9bcbffebe9bdd0dc75489cb4}
+
+\begin{DoxyCompactList}\small\item\em описание грамматического символа \end{DoxyCompactList}\item 
+\-Q\-List$<$ \-Symbols\-Sequence $>$ {\bf products}\label{classGrammarSymbol_a6a23b1626b2ac5f91c0578f279d37315}
+
+\begin{DoxyCompactList}\small\item\em продукции грамматического символа \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Описывает символ грамматики 
+
+\subsection{Конструктор(ы)}
+\index{\-Grammar\-Symbol@{\-Grammar\-Symbol}!\-Grammar\-Symbol@{\-Grammar\-Symbol}}
+\index{\-Grammar\-Symbol@{\-Grammar\-Symbol}!GrammarSymbol@{\-Grammar\-Symbol}}
+\subsubsection[{\-Grammar\-Symbol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Grammar\-Symbol\-::\-Grammar\-Symbol} (
+\begin{DoxyParamCaption}
+\item[{const \-Q\-String \&}]{alias, }
+\item[{const \-Q\-String \&}]{description = {\ttfamily \-Q\-String()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [explicit]}}\label{classGrammarSymbol_a927b675aa1189d5aee5c31ce4cf123a5}
+
+
+Создает грамматический символ с указаннами псевдонимом и описанием 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em alias} & псевдоним грамматического символа. \\
+\hline
+{\em description} & описание грамматического символа \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Методы}
+\index{\-Grammar\-Symbol@{\-Grammar\-Symbol}!is\-Terminal@{is\-Terminal}}
+\index{is\-Terminal@{is\-Terminal}!GrammarSymbol@{\-Grammar\-Symbol}}
+\subsubsection[{is\-Terminal}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Grammar\-Symbol\-::is\-Terminal} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classGrammarSymbol_a6373e59fb6b26eda93238f31ba19c1b0}
+
+
+Проверяет, является ли символ терминальным 
+
+\begin{DoxyReturn}{Возвращает}
+{\ttfamily true}, если символ терминальный (не содержит продукций), иначе {\ttfamily false} 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах\-:\begin{DoxyCompactItemize}
+\item 
+\-Grammar\-Symbol.\-h\item 
+\-Grammar\-Symbol.\-cpp\end{DoxyCompactItemize}

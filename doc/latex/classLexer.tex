@@ -1,0 +1,105 @@
+\section{Класс \-Lexer}
+\label{classLexer}\index{\-Lexer@{\-Lexer}}
+
+
+Лексический анализатор  
+
+
+
+
+{\ttfamily \#include $<$\-Lexer.\-h$>$}
+
+Граф наследования\-:\-Lexer\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classLexer}
+\end{center}
+\end{figure}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Lexer} (\-Q\-Text\-Stream \&strm)
+\begin{DoxyCompactList}\small\item\em Создает лексический анализатор для обработки потока данных {\itshape strm\/}. \end{DoxyCompactList}\item 
+{\bf \-Token} {\bf token} () const 
+\begin{DoxyCompactList}\small\item\em Возвращает значение токена на основе последней считанной лексемы \end{DoxyCompactList}\item 
+virtual {\bf \-Token} {\bfseries next\-Token} ()=0\label{classLexer_aefb597575e35cf11b0c207b4c279b26c}
+
+\item 
+const \-Q\-Text\-Stream \& {\bf stream} ()
+\begin{DoxyCompactList}\small\item\em Возвращает ссылку на поток, с которым работает текущий экземпляр анализатора \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\-Q\-Set$<$ \-Q\-Char $>$ {\bf ignored\-Chars}\label{classLexer_aeeca22b6d3c00718ce6a6efdeecaf26c}
+
+\begin{DoxyCompactList}\small\item\em Список игнорируемых символов \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Защищенные данные}
+\begin{DoxyCompactItemize}
+\item 
+\-Q\-Text\-Stream \& {\bf m\-\_\-strm}\label{classLexer_a5917fcd8a7a63ac287c52d92bae209ee}
+
+\begin{DoxyCompactList}\small\item\em Поток для обработки \end{DoxyCompactList}\item 
+{\bf \-Token} {\bf m\-\_\-token}\label{classLexer_a9d3564b81ee5782e1d17b91c32ea91c7}
+
+\begin{DoxyCompactList}\small\item\em Текущий, уже считанный токен \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Лексический анализатор 
+
+\subsection{Конструктор(ы)}
+\index{\-Lexer@{\-Lexer}!\-Lexer@{\-Lexer}}
+\index{\-Lexer@{\-Lexer}!Lexer@{\-Lexer}}
+\subsubsection[{\-Lexer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Lexer\-::\-Lexer} (
+\begin{DoxyParamCaption}
+\item[{\-Q\-Text\-Stream \&}]{strm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [explicit]}}\label{classLexer_a40eb253d60a387a79fd4fe5530cde54d}
+
+
+Создает лексический анализатор для обработки потока данных {\itshape strm\/}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em strm} & анализируемый поток \\
+\hline
+{\em white\-Spaces} & список игнорируемых символов \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Методы}
+\index{\-Lexer@{\-Lexer}!stream@{stream}}
+\index{stream@{stream}!Lexer@{\-Lexer}}
+\subsubsection[{stream}]{\setlength{\rightskip}{0pt plus 5cm}const \-Q\-Text\-Stream \& {\bf \-Lexer\-::stream} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classLexer_abf8dc6b2f227ccccba2f3285112698a9}
+
+
+Возвращает ссылку на поток, с которым работает текущий экземпляр анализатора 
+
+\begin{DoxyReturn}{Возвращает}
+ссылка на обрабатываемый поток. 
+\end{DoxyReturn}
+\index{\-Lexer@{\-Lexer}!token@{token}}
+\index{token@{token}!Lexer@{\-Lexer}}
+\subsubsection[{token}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Token} {\bf \-Lexer\-::token} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classLexer_af0b127e33e42fe7a62b662f4eed71b22}
+
+
+Возвращает значение токена на основе последней считанной лексемы 
+
+\begin{DoxyReturn}{Возвращает}
+последний считанный токен. 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах\-:\begin{DoxyCompactItemize}
+\item 
+\-Lexer.\-h\item 
+\-Lexer.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,87 @@
+\section{Класс \-Code\-Lexer}
+\label{classCodeLexer}\index{\-Code\-Lexer@{\-Code\-Lexer}}
+
+
+Лексический анализатор для программного кода  
+
+
+
+
+{\ttfamily \#include $<$\-Code\-Lexer.\-h$>$}
+
+Граф наследования\-:\-Code\-Lexer\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCodeLexer}
+\end{center}
+\end{figure}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Code\-Lexer} (\-Q\-Text\-Stream \&strm)
+\begin{DoxyCompactList}\small\item\em Создает экзмепляр лексического анализатора \end{DoxyCompactList}\item 
+virtual {\bf \-Token} {\bf next\-Token} ()
+\begin{DoxyCompactList}\small\item\em Считывает новую лексему из потока преобразует в токен и возвращает этот токен \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\-Q\-Set$<$ \-Q\-String $>$ {\bf reserved\-Words}\label{classCodeLexer_a08d111b7b3655b4f18426d9f9edddae6}
+
+\begin{DoxyCompactList}\small\item\em Список зарезервированных слов \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Лексический анализатор для программного кода 
+
+Считывает токены из входного потока, объединяя в лексемы целые и дробные числа (токен с псевдонимом {\itshape num\/}) и идентификаторы (токен с псевдонимом {\itshape id\/}). Отдельной лексемой считывает конец потока. Отслеживает позицию считывания во входном потоке. 
+
+\subsection{Конструктор(ы)}
+\index{\-Code\-Lexer@{\-Code\-Lexer}!\-Code\-Lexer@{\-Code\-Lexer}}
+\index{\-Code\-Lexer@{\-Code\-Lexer}!CodeLexer@{\-Code\-Lexer}}
+\subsubsection[{\-Code\-Lexer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Code\-Lexer\-::\-Code\-Lexer} (
+\begin{DoxyParamCaption}
+\item[{\-Q\-Text\-Stream \&}]{strm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [explicit]}}\label{classCodeLexer_a3cc4dfe8fc6c0a93658f72f603c47aef}
+
+
+Создает экзмепляр лексического анализатора 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em strm} & ссылка на входной поток, из которого будут считываться лексемы. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Методы}
+\index{\-Code\-Lexer@{\-Code\-Lexer}!next\-Token@{next\-Token}}
+\index{next\-Token@{next\-Token}!CodeLexer@{\-Code\-Lexer}}
+\subsubsection[{next\-Token}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Token} {\bf \-Code\-Lexer\-::next\-Token} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classCodeLexer_a70ca588b27d8c8fcc8a98553fbdbbe25}
+
+
+Считывает новую лексему из потока преобразует в токен и возвращает этот токен 
+
+Анализирует символы входного потока.
+
+Если поток содержит последовательность цифр (возможно разделенных точкой), то формируется токен числа с псевдонимом {\ttfamily \char`\"{}num\char`\"{}}, в поле {\itshape value\/} которого значение числа.
+
+Если поток содержит последовательность букв и цифр, начинающуюся с буквы, то формируется токен идентификатора. Далее проверяется наличие имени идентификатора (лексемы) в списке зарезервированных слов, если оно там имеется, то псевдонимом токена является сама лексема, иначе {\ttfamily \char`\"{}id\char`\"{}}, хранящий в поле {\itshape value\/} имя идентификатора (лексему).
+
+\begin{DoxyReturn}{Возвращает}
+сформированный токен. 
+\end{DoxyReturn}
+
+
+Замещает {\bf \-Lexer} \doxyref{}{стр.}{classLexer}.
+
+
+
+Объявления и описания членов классов находятся в файлах\-:\begin{DoxyCompactItemize}
+\item 
+\-Code\-Lexer.\-h\item 
+\-Code\-Lexer.\-cpp\end{DoxyCompactItemize}

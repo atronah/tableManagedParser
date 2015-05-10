@@ -1,0 +1,5 @@
+<E> ::= <T><Es>
+<Es> ::= + <T><Es> | empty
+<T> ::= <F><Ts>
+<Ts> ::= * <F><Ts> | empty
+<F> ::= (E) | id | num

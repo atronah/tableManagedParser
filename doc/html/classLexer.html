@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Table Driven Parser: Класс Lexer</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Table Driven Parser
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Создано системой Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="hierarchy.html"><span>Иерархия&#160;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&#160;классов</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('classLexer.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Lexer</div>  </div>
+</div><!--header-->
+<div class="contents">
+<!-- doxytag: class="Lexer" -->
+<p>Абстрактный лексический анализатор  
+ <a href="classLexer.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Lexer_8h_source.html">Lexer.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:Lexer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classLexer.png" usemap="#Lexer_map" alt=""/>
+  <map id="Lexer_map" name="Lexer_map">
+<area href="classCodeLexer.html" title="Лексический анализатор для программного кода" alt="CodeLexer" shape="rect" coords="0,56,95,80"/>
+<area href="classGrammarLexer.html" title="Лексический анализатор для работы с описанием КС-грамматики" alt="GrammarLexer" shape="rect" coords="105,56,200,80"/>
+</map>
+ </div></div>
+
+<p><a href="classLexer-members.html">Полный список членов класса</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLexer.html#a40eb253d60a387a79fd4fe5530cde54d">Lexer</a> (QTextStream &amp;strm)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает лексический анализатор для обработки потока данных <em>strm</em>.  <a href="#a40eb253d60a387a79fd4fe5530cde54d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structToken.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLexer.html#af0b127e33e42fe7a62b662f4eed71b22">token</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает значение токена на основе последней считанной лексемы  <a href="#af0b127e33e42fe7a62b662f4eed71b22"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefb597575e35cf11b0c207b4c279b26c"></a><!-- doxytag: member="Lexer::nextToken" ref="aefb597575e35cf11b0c207b4c279b26c" args="()=0" -->
+virtual <a class="el" href="structToken.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLexer.html#aefb597575e35cf11b0c207b4c279b26c">nextToken</a> ()=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает следующую лексему в виде токена. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const QTextStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLexer.html#abf8dc6b2f227ccccba2f3285112698a9">stream</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает ссылку на поток, с которым работает текущий экземпляр анализатора  <a href="#abf8dc6b2f227ccccba2f3285112698a9"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeeca22b6d3c00718ce6a6efdeecaf26c"></a><!-- doxytag: member="Lexer::ignoredChars" ref="aeeca22b6d3c00718ce6a6efdeecaf26c" args="" -->
+QSet&lt; QChar &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLexer.html#aeeca22b6d3c00718ce6a6efdeecaf26c">ignoredChars</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Список игнорируемых символов <br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5917fcd8a7a63ac287c52d92bae209ee"></a><!-- doxytag: member="Lexer::m_strm" ref="a5917fcd8a7a63ac287c52d92bae209ee" args="" -->
+QTextStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLexer.html#a5917fcd8a7a63ac287c52d92bae209ee">m_strm</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Поток для обработки <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d3564b81ee5782e1d17b91c32ea91c7"></a><!-- doxytag: member="Lexer::m_token" ref="a9d3564b81ee5782e1d17b91c32ea91c7" args="" -->
+<a class="el" href="structToken.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLexer.html#a9d3564b81ee5782e1d17b91c32ea91c7">m_token</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Текущий, уже считанный токен <br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Подробное описание</h2>
+<div class="textblock"><p>Абстрактный лексический анализатор </p>
+<p>Описывает минимальный набор функционала для лексического анализатора </p>
+</div><hr/><h2>Конструктор(ы)</h2>
+<a class="anchor" id="a40eb253d60a387a79fd4fe5530cde54d"></a><!-- doxytag: member="Lexer::Lexer" ref="a40eb253d60a387a79fd4fe5530cde54d" args="(QTextStream &amp;strm)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLexer.html#a40eb253d60a387a79fd4fe5530cde54d">Lexer::Lexer</a> </td>
+          <td>(</td>
+          <td class="paramtype">QTextStream &amp;&#160;</td>
+          <td class="paramname"><em>strm</em></td><td>)</td>
+          <td><code> [explicit]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Создает лексический анализатор для обработки потока данных <em>strm</em>. </p>
+<dl class="params"><dt><b>Аргументы:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strm</td><td>анализируемый поток </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Методы</h2>
+<a class="anchor" id="abf8dc6b2f227ccccba2f3285112698a9"></a><!-- doxytag: member="Lexer::stream" ref="abf8dc6b2f227ccccba2f3285112698a9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QTextStream &amp; <a class="el" href="classLexer.html#abf8dc6b2f227ccccba2f3285112698a9">Lexer::stream</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Возвращает ссылку на поток, с которым работает текущий экземпляр анализатора </p>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>ссылка на обрабатываемый поток. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af0b127e33e42fe7a62b662f4eed71b22"></a><!-- doxytag: member="Lexer::token" ref="af0b127e33e42fe7a62b662f4eed71b22" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structToken.html">Token</a> <a class="el" href="classLexer.html#af0b127e33e42fe7a62b662f4eed71b22">Lexer::token</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Возвращает значение токена на основе последней считанной лексемы </p>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>последний считанный токен. </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="Lexer_8h_source.html">Lexer.h</a></li>
+<li>Lexer.cpp</li>
+</ul>
+</div><!-- contents -->
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Переменные</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="classLexer.html">Lexer</a>      </li>
+
+    <li class="footer">Документация по Table Driven Parser. Последние изменения: Чт 2 Фев 2012 01:29:15. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

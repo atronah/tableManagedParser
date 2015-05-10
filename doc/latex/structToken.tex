@@ -1,0 +1,74 @@
+\section{Структура \-Token}
+\label{structToken}\index{\-Token@{\-Token}}
+
+
+Токен полученный из лексемы входного потока  
+
+
+
+
+{\ttfamily \#include $<$\-Lexer.\-h$>$}
+
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Token} (\-Q\-String a=\-Q\-String(\char`\"{}empty\char`\"{}), \-Q\-Variant v=\-Q\-Variant(), int l=-\/1, int p=-\/1, bool is\-Sys=false)
+\begin{DoxyCompactList}\small\item\em Создает токен с указанными параметрами \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\-Q\-String {\bf alias}\label{structToken_ab8e8a13e841bf54bf1dc802eb4557d3d}
+
+\begin{DoxyCompactList}\small\item\em псевдоним для лексемы \end{DoxyCompactList}\item 
+\-Q\-Variant {\bf value}\label{structToken_a3cb4743f3dd1dbc6bdfc84c415e9b37b}
+
+\begin{DoxyCompactList}\small\item\em значение лексемы \end{DoxyCompactList}\item 
+int {\bf line}\label{structToken_a4b96c2a31d7c374fd2bd1986794f80dd}
+
+\begin{DoxyCompactList}\small\item\em номер строки входного потока, содержащей лексему \end{DoxyCompactList}\item 
+int {\bf pos\-In\-Line}\label{structToken_aab7e25636c4dd8e2f873abd5b5435a17}
+
+\begin{DoxyCompactList}\small\item\em позиция лексемы в строке входного потока \end{DoxyCompactList}\item 
+bool {\bf is\-System\-Token}\label{structToken_ac77d1174920f71e83091e6d009b1f8a4}
+
+\begin{DoxyCompactList}\small\item\em флаг системного токена (ошибки, конец потока) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Токен полученный из лексемы входного потока 
+
+\subsection{Конструктор(ы)}
+\index{\-Token@{\-Token}!\-Token@{\-Token}}
+\index{\-Token@{\-Token}!Token@{\-Token}}
+\subsubsection[{\-Token}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Token\-::\-Token} (
+\begin{DoxyParamCaption}
+\item[{\-Q\-String}]{a = {\ttfamily \-Q\-String(\char`\"{}empty\char`\"{})}, }
+\item[{\-Q\-Variant}]{v = {\ttfamily \-Q\-Variant()}, }
+\item[{int}]{l = {\ttfamily -\/1}, }
+\item[{int}]{p = {\ttfamily -\/1}, }
+\item[{bool}]{is\-Sys = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{structToken_adc69586500a7bf29d1f8d7108a88cbd3}
+
+
+Создает токен с указанными параметрами 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em a} & псевдоним токена. \\
+\hline
+{\em v} & значение токена. \\
+\hline
+{\em l} & номер строки в исходном потоке, содержащей токен. \\
+\hline
+{\em p} & позиция токена в строке {\itshape l\/} исходного потока. \\
+\hline
+{\em is\-Sys} & флаг того, является ли токен системным. \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов структур находятся в файлах\-:\begin{DoxyCompactItemize}
+\item 
+\-Lexer.\-h\item 
+\-Lexer.\-cpp\end{DoxyCompactItemize}

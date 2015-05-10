@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Table Driven Parser: Исходный файл GrammarLexer.h</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Table Driven Parser
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Создано системой Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('GrammarLexer_8h.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">GrammarLexer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef GRAMMARLEXER_H</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define GRAMMARLEXER_H</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;Lexer.h&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;QQueue&gt;</span>
+<a name="l00006"></a>00006 
+<a name="l00008"></a><a class="code" href="structSurroundChars.html">00008</a> <span class="keyword">struct </span><a class="code" href="structSurroundChars.html" title="Описание символов, окружающих лексему">SurroundChars</a>{
+<a name="l00009"></a><a class="code" href="structSurroundChars.html#a01aab228ec4e8d8d1d34215e9b817bb2">00009</a>         <span class="keywordtype">char</span> <a class="code" href="structSurroundChars.html#a01aab228ec4e8d8d1d34215e9b817bb2" title="левый обрамляющий символ">left</a>;      
+<a name="l00010"></a><a class="code" href="structSurroundChars.html#a18d7820ae790961c0e17b130571b4c38">00010</a>         <span class="keywordtype">char</span> <a class="code" href="structSurroundChars.html#a18d7820ae790961c0e17b130571b4c38" title="правый обрамляющий символ">right</a>;     
+<a name="l00011"></a>00011         <a class="code" href="structSurroundChars.html" title="Описание символов, окружающих лексему">SurroundChars</a>(<span class="keywordtype">char</span> l, <span class="keywordtype">char</span> r);
+<a name="l00012"></a>00012 };
+<a name="l00013"></a>00013 
+<a name="l00015"></a>00015 
+<a name="l00022"></a><a class="code" href="classGrammarLexer.html">00022</a> <span class="keyword">class </span><a class="code" href="classGrammarLexer.html" title="Лексический анализатор для работы с описанием КС-грамматики">GrammarLexer</a> : <span class="keyword">public</span> <a class="code" href="classLexer.html" title="Абстрактный лексический анализатор">Lexer</a>
+<a name="l00023"></a>00023 {
+<a name="l00024"></a>00024     <span class="keyword">public</span>: <span class="comment">//members</span>
+<a name="l00026"></a><a class="code" href="classGrammarLexer.html#a0012543850a39d9b9c511a0b67317dea">00026</a> <span class="comment"></span>        <span class="keyword">static</span> <span class="keyword">const</span> QString <a class="code" href="classGrammarLexer.html#a0012543850a39d9b9c511a0b67317dea" title="лексема, соединяющая левую и правую часть правила грамматики">deffLexem</a>;
+<a name="l00028"></a><a class="code" href="classGrammarLexer.html#ade9c6fa3eb41a1dfb71115eefc17ae27">00028</a>         <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structSurroundChars.html" title="Описание символов, окружающих лексему">SurroundChars</a> <a class="code" href="classGrammarLexer.html#ade9c6fa3eb41a1dfb71115eefc17ae27" title="символы, в которые заключается имя неТерминала">surroundChars</a>;
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030     <span class="keyword">public</span>: <span class="comment">//methods</span>
+<a name="l00031"></a>00031         <a class="code" href="classGrammarLexer.html" title="Лексический анализатор для работы с описанием КС-грамматики">GrammarLexer</a>(QTextStream &amp;strm);
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033         <span class="keyword">virtual</span> <a class="code" href="structToken.html" title="Токен полученный из лексемы входного потока">Token</a> <a class="code" href="classGrammarLexer.html#a0ceeafa346f3ac54ee116fe5b50812fe" title="Считывает новую лексему из потока преобразует в токен и возвращает этот токен">nextToken</a>();
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035     <span class="keyword">private</span>: <span class="comment">//members</span>
+<a name="l00036"></a>00036         <span class="keywordtype">int</span> m_currentLine;      
+<a name="l00037"></a>00037         QQueue&lt;Token&gt; m_tokenBuffers; 
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039     <span class="keyword">private</span>: <span class="comment">//methods</span>
+<a name="l00040"></a>00040         <a class="code" href="classGrammarLexer.html" title="Лексический анализатор для работы с описанием КС-грамматики">GrammarLexer</a>();
+<a name="l00041"></a>00041 };
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 <span class="preprocessor">#endif // GRAMMARLEXER_H</span>
+</pre></div></div><!-- contents -->
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Переменные</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><b>GrammarLexer.h</b>      </li>
+
+    <li class="footer">Документация по Table Driven Parser. Последние изменения: Чт 2 Фев 2012 01:29:14. Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

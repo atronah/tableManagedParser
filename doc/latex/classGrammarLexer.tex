@@ -1,0 +1,72 @@
+\section{Класс \-Grammar\-Lexer}
+\label{classGrammarLexer}\index{\-Grammar\-Lexer@{\-Grammar\-Lexer}}
+
+
+Лексический анализатор для работы с описанием КС-\/грамматики  
+
+
+
+
+{\ttfamily \#include $<$\-Grammar\-Lexer.\-h$>$}
+
+Граф наследования\-:\-Grammar\-Lexer\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGrammarLexer}
+\end{center}
+\end{figure}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Grammar\-Lexer} (\-Q\-Text\-Stream \&strm)\label{classGrammarLexer_a755f5187a71b6b124a63cfb361dd4806}
+
+\begin{DoxyCompactList}\small\item\em Создает лексический анализатор для указанного потока {\itshape strm\/}. \end{DoxyCompactList}\item 
+virtual {\bf \-Token} {\bf next\-Token} ()
+\begin{DoxyCompactList}\small\item\em Считывает новую лексему из потока преобразует в токен и возвращает этот токен \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+static const \-Q\-String {\bf deff\-Lexem} = \char`\"{}\-::=\char`\"{}\label{classGrammarLexer_a0012543850a39d9b9c511a0b67317dea}
+
+\begin{DoxyCompactList}\small\item\em лексема, соединяющая левую и правую часть правила грамматики \end{DoxyCompactList}\item 
+static const {\bf \-Surround\-Chars} {\bf surround\-Chars} = {\bf \-Surround\-Chars}('$<$', '$>$')\label{classGrammarLexer_ade9c6fa3eb41a1dfb71115eefc17ae27}
+
+\begin{DoxyCompactList}\small\item\em символы, в которые заключается имя неТерминала \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Лексический анализатор для работы с описанием КС-\/грамматики 
+
+Обрабатывает файлы и прочие текстовые потоки построчно. Выделяя в строке отдельные лексемы левую (с одним нетерминалом) и правую (с одним и более символов грамматики) часть правила, символ их разделяющий. Правая часть разбивается на лексемы, соответствующие терминальным, нетерминальным символам и символу \char`\"{}$|$\char`\"{}, разделяющему несколько продукций для единой левой части. 
+
+\subsection{Методы}
+\index{\-Grammar\-Lexer@{\-Grammar\-Lexer}!next\-Token@{next\-Token}}
+\index{next\-Token@{next\-Token}!GrammarLexer@{\-Grammar\-Lexer}}
+\subsubsection[{next\-Token}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Token} {\bf \-Grammar\-Lexer\-::next\-Token} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classGrammarLexer_a0ceeafa346f3ac54ee116fe5b50812fe}
+
+
+Считывает новую лексему из потока преобразует в токен и возвращает этот токен 
+
+Анализирует символы входного потока построчно. В каждой строке пытается найти последовательность {\bfseries \-Ns\-M}, где {\bfseries \-N} -\/ нетерминальный символ, окруженный символами из surround\-Chars (угловыми скобками в системе БНФ); {\bfseries s} -\/ символ определения порождения ({\itshape \char`\"{}\-::=\char`\"{}\/} в системе БНФ) {\bfseries \-M} -\/ множество терминальных, нетерминальных символов и символа \char`\"{}$|$\char`\"{}.
+
+Если строка входного потока не начинается с пары {\bfseries \-Ns}, то возвращает токен ошибки ({\itshape alias\/} = {\ttfamily \char`\"{}error\char`\"{}}, {\itshape is\-System\-Token\/} = {\ttfamily true}.
+
+Каждая строка преобразуется в очередь токенов, откуда и происходит считывание очередного токена до тех пор, пока очередь не опустеет, после чего считывается новая строка и формируется новая очередь.
+
+\begin{DoxyReturn}{Возвращает}
+сформированный токен. 
+\end{DoxyReturn}
+
+
+Замещает {\bf \-Lexer} \doxyref{}{стр.}{classLexer}.
+
+
+
+Объявления и описания членов классов находятся в файлах\-:\begin{DoxyCompactItemize}
+\item 
+\-Grammar\-Lexer.\-h\item 
+\-Grammar\-Lexer.\-cpp\end{DoxyCompactItemize}

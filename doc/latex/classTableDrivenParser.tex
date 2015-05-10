@@ -1,0 +1,120 @@
+\section{Класс \-Table\-Driven\-Parser}
+\label{classTableDrivenParser}\index{\-Table\-Driven\-Parser@{\-Table\-Driven\-Parser}}
+
+
+Синтаксический нерекурсивный предиктивный анализатор \-L\-L(1)-\/грамматик  
+
+
+
+
+{\ttfamily \#include $<$\-Table\-Driven\-Parser.\-h$>$}
+
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Table\-Driven\-Parser} (\-Q\-Text\-Stream $\ast$error\-Out=0)
+\begin{DoxyCompactList}\small\item\em Создает экземпляр синтаксического анализатора \end{DoxyCompactList}\item 
+bool {\bf load\-Grammar} (const \-Q\-String \&file\-Path\-Name)
+\begin{DoxyCompactList}\small\item\em Загружает описание \-L\-L(1) грамматики из файла для конфигурирования парсера \end{DoxyCompactList}\item 
+void {\bf set\-Grammar} (const \-Q\-List$<$ {\bf \-Grammar\-Symbol} $>$ \&symbols)
+\begin{DoxyCompactList}\small\item\em Создает внутреннее описание грамматики на основе переданого списка \end{DoxyCompactList}\item 
+bool {\bf analyse} ({\bf \-Lexer} \&lexer, \-Q\-Dom\-Document \&result, bool is\-Parse\-Tree\-In\-Result=true)
+\begin{DoxyCompactList}\small\item\em Анализирует входной поток {\itshape stream\/} на соответствие грамматике \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Синтаксический нерекурсивный предиктивный анализатор \-L\-L(1)-\/грамматик 
+
+По указанному в виде файла описанию \-L\-L(1)-\/грамматики производит синтаксический разбор входного потока с использованнием указанного лексического анализатора.
+
+Формирует дерево разбора в виде \-X\-M\-L-\/документа. 
+
+\subsection{Конструктор(ы)}
+\index{\-Table\-Driven\-Parser@{\-Table\-Driven\-Parser}!\-Table\-Driven\-Parser@{\-Table\-Driven\-Parser}}
+\index{\-Table\-Driven\-Parser@{\-Table\-Driven\-Parser}!TableDrivenParser@{\-Table\-Driven\-Parser}}
+\subsubsection[{\-Table\-Driven\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Table\-Driven\-Parser\-::\-Table\-Driven\-Parser} (
+\begin{DoxyParamCaption}
+\item[{\-Q\-Text\-Stream $\ast$}]{error\-Out = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{classTableDrivenParser_a9567e9e506d8024a91125d5399ad23c5}
+
+
+Создает экземпляр синтаксического анализатора 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em error\-Out} & указатель на поток для вывода сообщений об ошибках анализа. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Методы}
+\index{\-Table\-Driven\-Parser@{\-Table\-Driven\-Parser}!analyse@{analyse}}
+\index{analyse@{analyse}!TableDrivenParser@{\-Table\-Driven\-Parser}}
+\subsubsection[{analyse}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Table\-Driven\-Parser\-::analyse} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Lexer} \&}]{lexer, }
+\item[{\-Q\-Dom\-Document \&}]{result, }
+\item[{bool}]{is\-Parse\-Tree\-In\-Result = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{classTableDrivenParser_ae6b177588fa192998df76d27ed290c34}
+
+
+Анализирует входной поток {\itshape stream\/} на соответствие грамматике 
+
+Производит анализ входного потока {\itshape stream\/} на соответствие грамматике, установленной для парсера с помощью \doxyref{load\-Grammar()}{стр.}{classTableDrivenParser_abbe14ed1158d653aaa1dcf0c256b7fda} или \doxyref{set\-Grammar()}{стр.}{classTableDrivenParser_a65fbc9f689d599a27b413b93cb8a109d}. Все ошибки, возникающие во время анализа выводятся либо в поток, заданный при создании объекта парсера, либо в stderr, если поток не был задан.
+
+В случае успешного анализа функция возрващает {\ttfamily true} и заполняет переданную по ссылке конструкцию \-Q\-Dom\-Document деревом разбора (при {\itshape is\-Parse\-Tree\-In\-Result\/} = {\ttfamily true}, по умолчанию) или ситаксическим деревом (при {\itshape is\-Parse\-Tree\-In\-Result\/} = {\ttfamily false}).
+
+
+\begin{DoxyParams}{Аргументы}
+{\em lexer} & лексический анализатор, из которого будут получаться лексемы. \\
+\hline
+{\em result} & дерево разбора или синтаксическое дерево, в зависимости от {\itshape is\-Syntax\-Tree\-In\-Result\/} \\
+\hline
+{\em is\-Parse\-Tree\-In\-Result} & флаг, указывающий, что нужно строить дерево разбора, а не синтаксическое дерево \\
+\hline
+\end{DoxyParams}
+\index{\-Table\-Driven\-Parser@{\-Table\-Driven\-Parser}!load\-Grammar@{load\-Grammar}}
+\index{load\-Grammar@{load\-Grammar}!TableDrivenParser@{\-Table\-Driven\-Parser}}
+\subsubsection[{load\-Grammar}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Table\-Driven\-Parser\-::load\-Grammar} (
+\begin{DoxyParamCaption}
+\item[{const \-Q\-String \&}]{file\-Path\-Name}
+\end{DoxyParamCaption}
+)}\label{classTableDrivenParser_abbe14ed1158d653aaa1dcf0c256b7fda}
+
+
+Загружает описание \-L\-L(1) грамматики из файла для конфигурирования парсера 
+
+Файл должен содержать описание по системе БНФ. При описании разрешено использовать как латиницу, так и кириллицу. Для грамматики предопределены такие терминалы, как {\ttfamily \char`\"{}id\char`\"{}} для идентификаторов и {\ttfamily \char`\"{}num\char`\"{}} для вещественных и целых чисел, а так же {\ttfamily \char`\"{}empty\char`\"{}} для пустого символа.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em file\-Path\-Name} & путь к файлу с описанием грамматики. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+{\ttfamily true}, если грамматика успешно загружена, иначе false. 
+\end{DoxyReturn}
+\index{\-Table\-Driven\-Parser@{\-Table\-Driven\-Parser}!set\-Grammar@{set\-Grammar}}
+\index{set\-Grammar@{set\-Grammar}!TableDrivenParser@{\-Table\-Driven\-Parser}}
+\subsubsection[{set\-Grammar}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Table\-Driven\-Parser\-::set\-Grammar} (
+\begin{DoxyParamCaption}
+\item[{const \-Q\-List$<$ {\bf \-Grammar\-Symbol} $>$ \&}]{symbols}
+\end{DoxyParamCaption}
+)}\label{classTableDrivenParser_a65fbc9f689d599a27b413b93cb8a109d}
+
+
+Создает внутреннее описание грамматики на основе переданого списка 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em symbols} & список символов грамматики и их продукций. \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов классов находятся в файлах\-:\begin{DoxyCompactItemize}
+\item 
+\-Table\-Driven\-Parser.\-h\item 
+\-Table\-Driven\-Parser.\-cpp\end{DoxyCompactItemize}
